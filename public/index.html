@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Draw Together</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+      h1{
+        font-size: 1.2em;
+
+      }
+      h5{
+        font-size: .5em
+      }
+      button {
+        color: black;
+        font-size: .1em;
+        border-radis: 4px;
+      }
+      input{
+        border-radius: 4px;
+      }
+      #blueButton {
+        background-color: blue;
+        color: white;
+      }
+      #redButton {
+        background-color: red;
+      }
+      #greenButton {
+        background-color: green;
+      }
+      #blackButton {
+        background-color: black;
+        color: white;
+      }
+      #indigoButton {
+        background-color: indigo;
+        color: white;
+      }
+      #brownButton {
+        background-color: saddlebrown;
+      }
+      #orangeButton {
+        background-color: orange;
+      }
+      #violetButton {
+        background-color: violet;
+        color: white;
+      }
+      #yellowButton {
+        background-color: yellow;
+      }
+      #greyButton {
+        background-color: grey;
+      }
+      .buttons{
+
+        text-align: center;
+      }
+      .thickness{
+        margin-bottom: 1em;
+        font-size: .7em;
+
+      }
+      .navbar, h1, h5{
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: .2em;
+        padding-right: .2em;
+        background-color: dodgerblue;
+        color: white;
+      }
+      body{
+        margin: 0;
+        font-family: 'Lato', sans-serif;
+      }
+      canvas {
+        border: .2em solid black
+      }
+      .the_canvas{
+        display: block;
+        text-align: center;
+      }
+      .flex_container{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .3em;
+        background-color: lightgrey
+      }
+      .flex_buttons{
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex_container">
+      <div class="navbar">
+        <h1>Draw Together</h1>
+        <h5>A Shared Canvas Designed With Socket.io</h5>
+      </div>
+      <div class="flex_buttons">
+        <div class="thickness">
+          Select Thickness:
+          <input id="thicc" type="number" placeholder="Select thickness" value="5">
+        </div>
+    <div class="buttons">
+      <button class= "btn btn-sm" id="redButton">Red</button>
+      <button class= "btn btn-sm" id="orangeButton">Orange</button>
+      <button class= "btn btn-sm" id="yellowButton">Yellow</button>
+      <button class= "btn btn-sm" id="greenButton">Green</button>
+      <button class= "btn btn-sm" id="blueButton">Blue</button>
+      <button class= "btn btn-sm" id="indigoButton">Indigo</button>
+      <button class= "btn btn-sm" id="violetButton">Violet</button>
+      <button class= "btn btn-sm" id="blackButton">Black</button>
+      <button class= "btn btn-sm" id="brownButton">Brown</button>
+      <button class= "btn btn-sm" id="greyButton">Grey</button>
+      <button class= "btn btn-sm" id="eraser">Eraser</button>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="the_canvas">
+        <canvas id="canvasId" width="800em" height="350em"></canvas>
+    </div>
+
+  </body>
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="frontend.js"></script>
+</html>
